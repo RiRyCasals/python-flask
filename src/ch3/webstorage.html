@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Webstorage</title>
+    </head>
+    <body>
+        <textarea id="tbox" rows="5" cols="60"></textarea>
+        <script type="text/javascript">
+            const tbox = document.getElementById('tbox')
+            if (localStorage['tbox']) {
+                tbox.value = localStorage['tbox']
+            }
+            tbox.onkeydown = function(e){
+                localStorage['tbox'] = tbox.value
+            }
+        </script>
+    </body>
+</html>
