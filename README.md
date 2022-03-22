@@ -10,3 +10,5 @@
 - `{% block ブロック名 %}` でブロックを作ることができる
 - GETメソッドの値は `request.args.get()` で受け取れる
 - POSTメソッドの値は `@app.route()` に `methods=['POST']` を指定し `request.form.get()` で受け取れる
+- cookieの値は `request.cookie.get()` で受け取れる
+- cookie情報を保存させるには `make_response()` で生成したデータに対して `set_cookie()` で付与する
