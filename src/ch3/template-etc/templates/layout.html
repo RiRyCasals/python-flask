@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Layout</title>
+        <style>
+            h3 {
+                background-color: silver;
+                padding: 8px;
+            }
+            div.user {
+                border: 1px bottom silver;
+                margin: 8px;
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            {% block title %}
+            {% endblock %}
+        </h1>
+        <div>
+            {% block contents %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
