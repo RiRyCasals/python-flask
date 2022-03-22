@@ -12,3 +12,5 @@
 - POSTメソッドの値は `@app.route()` に `methods=['POST']` を指定し `request.form.get()` で受け取れる
 - cookieの値は `request.cookie.get()` で受け取れる
 - cookie情報を保存させるには `make_response()` で生成したデータに対して `set_cookie()` で付与する
+- `session` を用いてセッションの管理を行う
+- セッションを利用する際には `secret_key` を指定する必要がある
