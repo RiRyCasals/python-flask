@@ -20,7 +20,7 @@ def index():
 @app.route('/setname')
 def setname():
     name = request.args.get('username')
-    if not name:
+    if name is None:
         return redirect('/')
     session['name'] = name
     return redirect('/morning')
