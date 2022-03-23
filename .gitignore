@@ -1,1 +1,2 @@
-./src/ch4/bbs/data/log.json
+src/ch4/bbs/data/log.json
+src/ch4/bbs/__pycache__/
