@@ -14,3 +14,8 @@
 - cookie情報を保存させるには `make_response()` で生成したデータに対して `set_cookie()` で付与する
 - `session` を用いてセッションの管理を行う
 - セッションを利用する際には `secret_key` を指定する必要がある
+- セッションからキーを削除するには `session.popp()` を使う
+
+# 後で詳細を調べる予定のもの
+
+- `flask-login` パッケージの `login_required` デコレータ
