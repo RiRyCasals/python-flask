@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/style.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="content">
+            <h1>会員制の掲示板</h1>
+            <form class="pure-form pure-form-stacked" action="/try_login" method="POST">
+                <legend>☺ログインが必要です</legend>
+                <fieldset>
+                    <label for="user">ユーザー名</label>
+                    <input type="text" name="user" id="user">
+                    <label for="pw">パスワード</label>
+                    <input type="password" name="pw" id="pw">
+                    <button class="pure-button pure-button-primary" type="submit">ログイン</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
