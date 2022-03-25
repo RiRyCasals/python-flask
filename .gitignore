@@ -1,2 +1,15 @@
-src/ch4/bbs/data/log.json
+src/.DS_Store
+src/ch3/.DS_Store
+src/ch4/.DS_Store
+
+src/ch4/bbs/.DS_Store
 src/ch4/bbs/__pycache__/
+src/ch4/bbs/data/*
+!src/ch4/bbs/data/.gitkeep
+
+src/ch4/fileshare/.DS_Store
+src/ch4/fileshare/__pycache__/
+src/ch4/fileshare/data/*
+!src/ch4/fileshare/data/.gitkeep
+src/ch4/fileshare/files/*
+!src/ch4/fileshare/files/.gitkeep
