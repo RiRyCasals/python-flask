@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>Admin_list</title>
+    </head>
+    <body>
+        <div class="content">
+            <h1>管理ページ</h1>
+            {% for f in files %}
+                <div style="border: 1px solid silver; padding: 8px; margin: 8px; background-color: #fffff0;">
+                    <p>
+                        {{ f.name }}さん - {{ f.memo }} - {{f.time_limit | datetime }} - {{ f.count }}回<br>
+                        <a href="/admin/remove/{{ f.id }}?pw={{ pw }}">削除</a> - <a href="/download/{{ f.id }}">ダウンロード</a>
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
