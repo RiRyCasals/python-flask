@@ -13,3 +13,8 @@ src/ch4/fileshare/data/*
 !src/ch4/fileshare/data/.gitkeep
 src/ch4/fileshare/files/*
 !src/ch4/fileshare/files/.gitkeep
+
+src/ch4/haikusns/.DS_Store
+src/ch4/haikusns/__pycache__/
+src/ch4/haikusns/data/*
+!src/ch4/haikusns/data/.gitkeep
