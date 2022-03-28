@@ -18,3 +18,10 @@ src/ch4/haikusns/.DS_Store
 src/ch4/haikusns/__pycache__/
 src/ch4/haikusns/data/*
 !src/ch4/haikusns/data/.gitkeep
+
+src/ch4/photoshare/.DS_Store
+src/ch4/photoshare/__pycache__/
+src/ch4/photoshare/data/*
+!src/ch4/photoshare/data/.gitkeep
+src/ch4/photoshare/files/*
+!src/ch4/photoshare/files/.gitkeep
