@@ -9,12 +9,12 @@
     </head>
     <body>
         <div id="map_div" style="width: 800px; height: 600px"></div>
-            <script type="text/javascript">
-                const defPos = [35.6585840, 139.7454316]
-                const copyright = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                const map = L.map('map_div').setView(defPos, 20)
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: copyright}).addTo(map)
-                L.marker(defPos).addTo(map).bindPopup('<u>人気の観光名所の東京タワー</u>').openPopUp()
-            </script>
+        <script type="text/javascript">
+            const defPos = [35.6585840, 139.7454316]
+            const copyright = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            const map = L.map('map_div').setView(defPos, 20)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: copyright}).addTo(map)
+            L.marker(defPos).addTo(map).bindPopup('<u>人気の観光名所の東京タワー</u>').openPopUp()
+        </script>
     </body>
 </html>
