@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+        <title>Osm current</title>
+    </head>
+    <body>
+        <div id="map_div" style="width: 800px; height: 600px"></div>
+        <script type="text/javascript">
+            const defPos = [35.6585840, 139.7454316]
+            const copyright = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            const map = L.map('map_div').setView(defPos, 17)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: copyright}).addTo(map)
+            const marker = L.marker(defPos).addTo(map)
+            navigator.geolocation.watchPosition(
+                function (pos) {
+                    const lat = pos.coords.latitude
+                    const lng = pos.coords.longitude
+                    const zoom = map.getZoom()
+                    map.setView([lat, lng], zoom, {animation: true})
+                    marker.setLatLng([lat, lng])
+                    marker.bindPopup('現在位置はここ')
+                }
+            )
+        </script>
+    </body>
+</html>
