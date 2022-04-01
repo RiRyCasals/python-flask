@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Geolocation</title>
+    </head>
+    <body>
+        <div id="info" style="font-size: 60px;"></div>
+        <script type="text/javascript">
+            const info = document.querySelector('#info')
+            if ('geolocation' in navigator) {
+                info.innerHTML = "準備中"
+            } else {
+                info.innerHTML = "GeoLocationが使えません"
+            }
+            var wid = navigator.geolocation.watchPosition(watchFunc)
+            function watchFunc(pos) {
+                info.innerHTML = "位置情報: " + pos.coords.latitude + ',' + pos.coords.longitude
+            }
+        </script>
+    </body>
+</html>
