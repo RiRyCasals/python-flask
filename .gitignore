@@ -27,3 +27,6 @@ src/ch4/photoshare/data/*
 !src/ch4/photoshare/data/.gitkeep
 src/ch4/photoshare/files/*
 !src/ch4/photoshare/files/.gitkeep
+
+src/ch5/GeoLite2-City_20220329
+src/ch5/GeoLite2-City_20220329.tar.gz
