@@ -31,8 +31,8 @@ src/ch4/photoshare/files/*
 src/ch5/GeoLite2-City_20220329
 src/ch5/GeoLite2-City_20220329.tar.gz
 
-src/ch5/ken_all.zip
-src/ch5/KEN_ALL.CSV
-src/ch5/jigyosyo.zip
-src/ch5/JIGYOSYO.CSV
+src/ch5/*.zip
+src/ch5/*.CSV
 src/ch5/zip.sqlite
+
+src/ch5/*.png
