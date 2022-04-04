@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Zip form</title>
+    </head>
+    <body>
+        <div>
+            <form>
+                郵便番号：<br>
+                <input type="text" name="zip" id="zip">
+                <input type="button" id="zipBtn" value="自動入力"><br>
+                住所：<br>
+                <input type="text" name="addr" id="addr" size="60"><br>
+                <input type="submit" value="送信">
+            </form>
+        </div>
+    </body>
+</html>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script>
+    const API = '/api?q='
+    const zipBtn = document.querySelector('#zipBtn')
+    const zip = document.querySelector('#zip')
+    const addr = document.querySelector('#addr')
+    zipBtn.onclick = function () {
+        const q = zip.value.replace('-', '')
+        addr.value = ''
+        jQuery.get(API + q, {}, gotAddress, 'json')
+    }
+    function gotAddress(data) {
+        if (data.length == 0) return
+        if (addr.value == '') {
+            addr.value = data[0]
+        }
+    }
+</script>
