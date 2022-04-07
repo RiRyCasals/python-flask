@@ -38,3 +38,5 @@ src/ch5/zip.sqlite
 src/ch5/*.png
 src/ch5/counter.json
 src/ch5/static/qrcode_jump.png
+
+src/ch5/*.json
