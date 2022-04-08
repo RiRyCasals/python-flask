@@ -3,6 +3,7 @@
 src/.DS_Store
 src/ch3/.DS_Store
 src/ch4/.DS_Store
+src/ch5/.DS_Store
 
 src/ch4/bbs/.DS_Store
 src/ch4/bbs/__pycache__/
@@ -40,3 +41,6 @@ src/ch5/counter.json
 src/ch5/static/qrcode_jump.png
 
 src/ch5/*.json
+
+src/ch5/wiki/__pycache__
+src/ch5/wiki/data/*.md
