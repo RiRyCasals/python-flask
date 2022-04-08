@@ -1,5 +1,6 @@
 import os
 import json
+import base64
 import hashlib
 from flask import Flask, request
 
@@ -10,14 +11,25 @@ HASH_SALT = 'uN6yjW:qqU#6X_dGapK!LGOFi_eK_OA3'
 app = Flask(__name__)
 
 
+#def password_hash(password):
+#    key = password + HASH_SALT
+#    key_b = key.encode('utf-8')
+#    return hashlib.sha256(key_b).hexdigest()
+#
+#def password_verify(password, hash):
+#    hash_v = password_hash(password)
+#    return (hash_v == hash)
+
 def password_hash(password):
-    key = password + HASH_SALT
-    key_b = key.encode('utf-8')
-    return hashlib.sha256(key_b).hexdigest()
+    salt = os.urandom(16)
+    digest = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 10000)
+    return base64.b64encode(salt + digest).decode('ascii')
 
 def password_verify(password, hash):
-    hash_v = password_hash(password)
-    return (hash_v == hash)
+    b = base64.b64decode(hash)
+    salt, digest_v = b[:16],  b[16:]
+    digest_n = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 10000)
+    return digest_n == digest_v
 
 def load_users():
     if os.path.exists(DATA_FILE):
