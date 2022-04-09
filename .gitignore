@@ -44,3 +44,6 @@ src/ch5/*.json
 
 src/ch5/wiki/__pycache__
 src/ch5/wiki/data/*.md
+
+src/ch5/wiki2/__pycache__/
+src/ch5/wiki2/data/
