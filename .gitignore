@@ -1,29 +1,18 @@
-.DS_Store
+*.DS_Store
+*__pycache__
 
-src/.DS_Store
-src/ch3/.DS_Store
-src/ch4/.DS_Store
-src/ch5/.DS_Store
 
-src/ch4/bbs/.DS_Store
-src/ch4/bbs/__pycache__/
 src/ch4/bbs/data/*
 !src/ch4/bbs/data/.gitkeep
 
-src/ch4/fileshare/.DS_Store
-src/ch4/fileshare/__pycache__/
 src/ch4/fileshare/data/*
 !src/ch4/fileshare/data/.gitkeep
 src/ch4/fileshare/files/*
 !src/ch4/fileshare/files/.gitkeep
 
-src/ch4/haikusns/.DS_Store
-src/ch4/haikusns/__pycache__/
 src/ch4/haikusns/data/*
 !src/ch4/haikusns/data/.gitkeep
 
-src/ch4/photoshare/.DS_Store
-src/ch4/photoshare/__pycache__/
 src/ch4/photoshare/data/*
 !src/ch4/photoshare/data/.gitkeep
 src/ch4/photoshare/files/*
@@ -42,8 +31,6 @@ src/ch5/static/qrcode_jump.png
 
 src/ch5/*.json
 
-src/ch5/wiki/__pycache__
 src/ch5/wiki/data/*.md
 
-src/ch5/wiki2/__pycache__/
 src/ch5/wiki2/data/
